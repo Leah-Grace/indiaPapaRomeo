@@ -4,7 +4,8 @@
   "description": "This registry provides consumers participating in the Independent Provider (IP) access to a database of trained Personal Care Aides (PCA's) for the purpose of procuring personal care and hoemaker services on demand.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
