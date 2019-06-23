@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Leah-Grace/indiaPapaRomeo#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.6.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {

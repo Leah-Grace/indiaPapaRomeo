@@ -16,3 +16,13 @@ This registry will provide a database of trained Personal Care Aides (PCA's) tha
 ###### Application Hosting
 
 (https://trifinlabs.com/heroku-vs-aws/ "optons analysis")
+
+###### Database Hosting
+
+IP-PCA-2019 @ohhs.ri.gov
+
+other:
+persistent data - MERN 2 (express)
+Client cache
+Regex
+google maps api
