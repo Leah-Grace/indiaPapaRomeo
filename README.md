@@ -11,3 +11,8 @@ This registry will provide a database of trained Personal Care Aides (PCA's) tha
 - June 21 - Initialized application and installed packages:
   - Express v4.17.1
   * serve-favicon v2.5
+  * nodemon v1.19.1 (Dev)
+
+###### Application Hosting
+
+(https://trifinlabs.com/heroku-vs-aws/ "optons analysis")
