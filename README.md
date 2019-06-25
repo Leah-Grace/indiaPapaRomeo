@@ -12,6 +12,8 @@ This registry will provide a database of trained Personal Care Aides (PCA's) tha
   - Express v4.17.1
   * serve-favicon v2.5
   * nodemon v1.19.1 (Dev)
+  * body-parser v6.9.0
+  * mongoose v6.9.0
 
 ###### Application Hosting
 
@@ -20,6 +22,7 @@ This registry will provide a database of trained Personal Care Aides (PCA's) tha
 ###### Database Hosting
 
 IP-PCA-2019 @ohhs.ri.gov
+Clustered as IPPCARegistry
 
 other:
 persistent data - MERN 2 (express)
