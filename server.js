@@ -1,16 +1,23 @@
 const express = require("express");
 const app = express();
-const port = 10000 || process.env.port;
+const mongoose = require("mongoose");
+const keys = require("./keys.js");
+const bodyParser = require("body-parser");
 const favicon = require("serve-favicon");
 const path = require("path");
 
+const port = 10000 || process.env.port;
+
 app.use("/", express.static("public"));
 
-app.get("/", (req, res) => {
-  console.log("Hello Independent Providers of Rhode Island");
-});
-
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
+
+//Connect to MongoDB w mongoose
+mongoose
+  .connect(keys.mongoDBUrl, { useNewUrlParser: true })
+  .then(() => console.log("DB Connected"));
+
+app.use(bodyParser.json());
 
 //Query
 //query by username
