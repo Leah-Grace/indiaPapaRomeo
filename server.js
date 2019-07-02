@@ -16,7 +16,8 @@ app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 //Connect to MongoDB w mongoose
 mongoose
   .connect(keys.mongoDBUrl, { useNewUrlParser: true })
-  .then(() => console.log("DB Connected"));
+  .then(() => console.log("DB Connected"))
+  .catch(err => console.log(err));
 
 app.use(bodyParser.json());
 
@@ -30,7 +31,7 @@ app.post("/api", (req, res) => {
   const pcaCity = req.body.pcaCity;
   const pcaState = req.body.pcaState;
   const pcaZipcode = req.body.pcaZipcode;
-  const pcaTravelDistance = req.body.pcaTravelDistance;
+  const pcaTravelDistanceMiles = req.body.pcaTravelDistanceMiles;
   const pcaGender = req.body.pcaGender;
   const pcaLanguages = req.body.pcaLanguages;
   const pcaNA = req.body.pcaNA;
@@ -53,7 +54,7 @@ app.post("/api", (req, res) => {
     pcaCity: pcaCity,
     pcaState: pcaState,
     pcaZipcode: pcaZipcode,
-    pcaTravelDistance: pcaTravelDistance,
+    pcaTravelDistanceMiles: pcaTravelDistanceMiles,
     pcaGender: pcaGender,
     pcaLanguages: pcaLanguages,
     pcaNA: pcaNA,

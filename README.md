@@ -29,3 +29,4 @@ persistent data - MERN 2 (express)
 Client cache
 Regex
 google maps api
+Fuzzy Search
