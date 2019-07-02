@@ -18,7 +18,7 @@ const PCASchema = new Schema({
 
   pcaZipcode: { type: String, required: true },
 
-  pcaTravelDistance: { type: Number, required: true },
+  pcaTravelDistanceMiles: { type: Number, required: true },
 
   pcaGender: { type: String, required: true },
 
