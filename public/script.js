@@ -17,6 +17,7 @@ function showPCAProfile() {
 
 function showAll() {
   axios.get("/getall").then(res => {
-    document.getElementById("PCAList").innerHTML = JSON.stringify(res.data);
+    let list = JSON.stringify(res.data);
+    document.getElementById("PCAList").innerHTML = list;
   });
 }
