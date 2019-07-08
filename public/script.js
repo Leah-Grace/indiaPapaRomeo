@@ -21,3 +21,10 @@ function showAll() {
     document.getElementById("PCAList").innerHTML = list;
   });
 }
+
+function registerPost() {
+  axios.post("/api").then( res => 
+const pcaFirstName = document.getElementById("fname").value;
+    //derp
+}
+
