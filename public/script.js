@@ -17,16 +17,46 @@ function showPCAProfile() {
 
 function showAll() {
   axios.get('/getall').then((res) => {
-    let list = JSON.stringify(res.data);
+    let list = JSON.stringify(
+      res.data.map((pca) => pca.pcaFirstName + ', ' + pca.pcaLastName)
+    );
     document.getElementById('PCAList').innerHTML = list;
   });
 }
 
 //POST REQUEST
-/*
+
 function registerPost() {
-  axios.post("/api").then( res => 
-const pcaFirstName = document.getElementById("fname").value;
-    //derp
+  const pcaFirstName = document.getElementById('fname').value;
+  const pcaLastName = document.getElementById('lname').value;
+  const pcaEmail = document.getElementById('email').value;
+  const pcaPhonePrimary = document.getElementById('pcaPhonePrimary').value;
+  const pcaPhoneSecondary = document.getElementById('pcaPhoneSecondary').value;
+  const pcaCity = document.getElementById('pcaCity').value;
+  const pcaState = document.getElementById('pcaState').value;
+  const pcaZipcode = document.getElementById('pcaZipcode').value;
+  const pcaExperience = document.getElementById('pcaExperience').value;
+  const pcaBio = document.getElementById('pcaBio').value;
+  const pcaTravelDistanceMiles = document.getElementById(
+    'pcaTravelDistanceMiles'
+  ).value;
+  const pcaHoursPerWeek = document.getElementById('pcaHoursPerWeek').value;
+  const pcaGender = document.querySelector('input[name="gender"]:checked')
+    .value;
+  const payload = {
+    pcaFirstName,
+    pcaLastName,
+    pcaEmail,
+    pcaPhonePrimary,
+    pcaPhoneSecondary,
+    pcaCity,
+    pcaState,
+    pcaZipcode,
+    pcaExperience,
+    pcaBio,
+    pcaTravelDistanceMiles,
+    pcaHoursPerWeek,
+    pcaGender
+  };
+  axios.post('/api', payload).then((res) => console.log(res.data));
 }
-*/

@@ -14,8 +14,27 @@
     </div>
 <div class="registryForm">
 <h4>PCA Registration</h4>
-<input id="fname" type="text" placeholder="First Name" onclick="registerPost()">
+<input id="fname" type="text" placeholder="First Name*"><br>
+<input id="lname" type="text" placeholder="Last Name*"><br>
+<input id="email" type="text" placeholder="email Address*"><br>
+<input id="pcaPhonePrimary" type="text" placeholder="Primary Phone Number*"><br>
+<input id="pcaPhoneSecondary" type="text" placeholder="Secondary Phone Number"><br>
+<input id="pcaCity" type="text" placeholder="City*"><br>
+<input id="pcaState" type="text" placeholder="State*"><br>
+<input id="pcaZipcode" type="text" placeholder="Zipcode*"><br>
+<input id="pcaExperience" type="text" placeholder="Describe any past experience as a Personal Care Aide"><br>
+<input id="pcaBio" type="text" placeholder="Tell us about yourself"><br>
+<input id="pcaTravelDistanceMiles" type="text" placeholder="Distance Willing to Travel*"><br>
+<input id="pcaHoursPerWeek" type="text" placeholder="Number of hours willing to work per week*"><br>
+
+<p>Please select your gender:</p>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br> 
+
+<button onclick="registerPost()">Register</button>
 </div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
