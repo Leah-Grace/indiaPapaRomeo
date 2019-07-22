@@ -43,6 +43,13 @@ function registerPost() {
   const pcaHoursPerWeek = document.getElementById('pcaHoursPerWeek').value;
   const pcaGender = document.querySelector('input[name="gender"]:checked')
     .value;
+  const pcaNA = document.querySelector('input[name="pcaNA"]:checked').value;
+  const pcaSmoking = document.querySelector('input[name="pcaSmoking"]:checked')
+    .value;
+  const pcaAllergies = document.querySelector(
+    'input[name="pcaAllergies"]:checked'
+  ).value;
+
   const payload = {
     pcaFirstName,
     pcaLastName,
@@ -56,7 +63,10 @@ function registerPost() {
     pcaBio,
     pcaTravelDistanceMiles,
     pcaHoursPerWeek,
-    pcaGender
+    pcaGender,
+    pcaNA,
+    pcaSmoking,
+    pcaAllergies
   };
   axios.post('/api', payload).then((res) => console.log(res.data));
 }

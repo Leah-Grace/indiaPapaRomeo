@@ -32,9 +32,31 @@
   <input type="radio" name="gender" value="female"> Female<br>
   <input type="radio" name="gender" value="other"> Other<br> 
 
+  <p>Are you currently licensed as a Nursing Assistant?:</p>
+  <input type="radio" name="pcaNA" value="true"> Yes, currently licensed as a Nursing Assistant<br>
+  <input type="radio" name="pcaNA" value="false"> No<br>
+
+<p>Smoking Preference:</p>
+<input type="radio" name="pcaSmoking"
+value="false">I prefer a non-smoking work environment<br>
+<input type="radio" name="pcaSmoking" value="true">I am willing to work in an environment where smoking takes place<br><br>
+
+<p>Allergies:</p>
+<input type="radio" name="pcaAllergies" value="false">I have no allergies<br>
+<input type="radio" name="pcaAllergies" value="true" onchange="allergiesList()" id="hasAllergies">I have allergies<br>
+
 <button onclick="registerPost()">Register</button>
 </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+function allergiesList() {
+    const allergiestListInput = document.createElement('input');allergiestListInput.setAttribute('type', 'text');
+    allergiestListInput.setAttribute('placeholder', 'List any known allergies here');
+    const parent = document.getElementById('hasAllergies');
+    parent.appendChild(allergiestListInput);
+}
+</script>
         <script src="script.js"></script>
     </body>
 </html>

@@ -27,17 +27,21 @@ const PCASchema = new Schema({
   pcaHoursPerWeek: { type: Number, required: true },
 
   pcaGender: { type: String, required: true },
-  /*
-  pcaLanguages: { type: Array, required: true },
 
   pcaNA: { type: Boolean, required: true },
 
   pcaSmoking: { type: Boolean, required: true },
 
   pcaAllergies: { type: Boolean, required: true }, //expand to an array
+  /*
   pcaAllergiesList: { type: Array, required: false },
+*/
 
+  /*
   pcaOnDemand: { type: Boolean, default: false, required: true },
+
+  pcaLanguages: { type: Array, required: true },
+
 */
 
   pcaArroved: { type: Boolean, default: false, required: true },
