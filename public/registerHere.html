@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="homeTitle">
+        <h2>Rhode Island Executive Office of Health and Human Services</h2>
+    </div>
+<div class="registryForm">
+<h4>PCA Registration</h4>
+<input id="fname" type="text" placeholder="First Name*"><br>
+<input id="lname" type="text" placeholder="Last Name*"><br>
+<input id="email" type="text" placeholder="email Address*"><br>
+<input id="pcaPhonePrimary" type="text" placeholder="Primary Phone Number*"><br>
+<input id="pcaPhoneSecondary" type="text" placeholder="Secondary Phone Number"><br>
+<input id="pcaCity" type="text" placeholder="City*"><br>
+<input id="pcaState" type="text" placeholder="State*"><br>
+<input id="pcaZipcode" type="text" placeholder="Zipcode*"><br>
+<input id="pcaExperience" type="text" placeholder="Describe any past experience as a Personal Care Aide"><br>
+<input id="pcaBio" type="text" placeholder="Tell us about yourself"><br>
+<input id="pcaTravelDistanceMiles" type="text" placeholder="Distance Willing to Travel*"><br>
+<input id="pcaHoursPerWeek" type="text" placeholder="Number of hours willing to work per week*"><br>
+
+<p>Please select your gender:</p>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br> 
+
+  <p>Are you currently licensed as a Nursing Assistant?:</p>
+  <input type="radio" name="pcaNA" value="true"> Yes, currently licensed as a Nursing Assistant<br>
+  <input type="radio" name="pcaNA" value="false"> No<br>
+
+<p>Smoking Preference:</p>
+<input type="radio" name="pcaSmoking"
+value="false">I prefer a non-smoking work environment<br>
+<input type="radio" name="pcaSmoking" value="true">I am willing to work in an environment where smoking takes place<br><br>
+
+<p>Allergies:</p>
+<input type="radio" name="pcaAllergies" value="false">I have no allergies<br>
+<input type="radio" name="pcaAllergies" value="true" onchange="allergiesList()" id="hasAllergies">I have allergies<br>
+
+<button onclick="registerPost()">Register</button>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+function allergiesList() {
+   const allergiestListInput = document.createElement('input');
+   /*
+   allergiestListInput.setAttribute('type', 'text');
+    allergiestListInput.setAttribute('placeholder', 'List any known allergies here');
+    */
+    const parent = document.getElementById('hasAllergies');
+    parent.appendChild(allergiestListInput);
+    */
+   console.log('lets party');
+}
+</script>
+        <script src="script.js"></script>
+    </body>
+</html>
+</html>

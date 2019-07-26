@@ -4,3 +4,20 @@
   margin: 5px;
   padding: 5px;
 }
+a:link,
+a:visited {
+  color: (internal value);
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active,
+a:visited:active {
+  color: (internal value);
+}
+
+#homeBody,
+#homeTitle,
+.registryForm {
+  text-align: center;
+}

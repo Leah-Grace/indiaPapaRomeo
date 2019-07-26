@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const PCASchema = new Schema({
@@ -18,30 +18,35 @@ const PCASchema = new Schema({
 
   pcaZipcode: { type: String, required: true },
 
+  pcaExperience: { type: String, required: false },
+
+  pcaBio: { type: String, required: false },
+
   pcaTravelDistanceMiles: { type: Number, required: true },
 
-  pcaGender: { type: String, required: true },
+  pcaHoursPerWeek: { type: Number, required: true },
 
-  pcaLanguages: { type: Array, required: true },
+  pcaGender: { type: String, required: true },
 
   pcaNA: { type: Boolean, required: true },
 
   pcaSmoking: { type: Boolean, required: true },
 
   pcaAllergies: { type: Boolean, required: true }, //expand to an array
+  /*
   pcaAllergiesList: { type: Array, required: false },
+*/
 
-  pcaHoursPerWeek: { type: Number, required: true },
-
+  /*
   pcaOnDemand: { type: Boolean, default: false, required: true },
 
-  pcaExperience: { type: String, required: false },
+  pcaLanguages: { type: Array, required: true },
 
-  pcaBio: { type: String, required: false },
+*/
 
   pcaArroved: { type: Boolean, default: false, required: true },
 
   pcaJoinDate: { type: Date, default: Date.now }
 });
 
-module.exports = PCA = mongoose.model("PCA", PCASchema);
+module.exports = PCA = mongoose.model('PCA', PCASchema);
